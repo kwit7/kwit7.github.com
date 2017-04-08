@@ -1,0 +1,229 @@
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
+@import 'flexbox-grid-mixins';
+
+
+* {
+	font-family: 'Open sans', sans-serif;
+}
+
+.wrapper {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+section {
+	width: 100%;
+	margin: 0 auto;
+	padding: 20px 0px;
+	margin-bottom: 20px;
+}
+
+.section-header {
+	text-align: center;
+	margin-top: 200px;
+}
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+  	flex-direction: row;
+  	margin-bottom: 50px;
+}
+
+.grid-left {
+  width: 20%;
+}
+
+.grid-center {
+  width: 60%;
+}
+
+.grid-right {
+	width: 20%;
+}
+
+
+
+.shape-container-right {
+	position: relative;
+	max-width: 300px;
+	float: right;
+}
+
+.text-rotate-left {
+	@include text-rotate(right,0px);
+	left: 0;
+}
+
+.text-rotate-right {
+	@include text-rotate(left,0px);
+	right: 0;
+}
+
+
+/* SHAPES */
+
+.shape-right-yellow {
+	@include shape-right(#EFAF09, 100px, 110px, 10px);
+}
+
+.shape-right-navy {
+	@include shape-right(#001C2F, 280px, 170px, 80px)
+}
+
+.shape-right-teal {
+	@include shape-right(#66BEB2, 100px, 60px, 460px)
+}
+
+.shape-right-gray {
+	@include shape-right(rgba(204,204,204,0.3), 150px, 120px, 460px)
+}
+
+
+
+.shape-left-teal {
+	@include shape-left(#66BEB2, 100px, 60px, 460px)
+}
+
+.shape-left-gray {
+	@include shape-left(rgba(204,204,204,0.3), 150px, 180px, 10px)
+}
+
+.shape-left-yellow {
+	@include shape-left(#EFAF09, 250px, 110px, 100px);
+}
+
+.shape-left-navy {
+	@include shape-left(#001C2F, 280px, 200px, 140px)
+}
+
+
+
+
+
+/* HEADER */
+
+.header-section {
+	background: url("../images/background.png") no-repeat top center;
+	background-size: cover;
+	//background-image: url("../images/background.png");
+	color: #fff;
+}
+
+.header-row-1, .header-row-2 {
+	display: flex;
+	justify-content: center;
+}
+
+.header-row-1 div {
+	padding: 20px;
+}
+
+
+
+
+
+
+/* CONTACT CONTAINER */
+.contact-container {
+	//display: flex;
+	//flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.contact-container div {
+	margin: 10px;
+}
+
+.contact-container div:nth-child(1) {
+	margin-left: 60px;
+}
+
+.contact-container div:nth-child(2) {
+	margin-left: 200px;
+}
+
+
+
+
+/* FILTER..if I get this far */
+
+.filter-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.filter-container div {
+	margin: auto;
+	text-align: left;
+}
+
+
+
+/* FONTS */
+h1 {
+	font-family: 'Great Vibes', 'Handlee', cursive;
+	font-size: 3em;
+	color: $yellow;
+	margin-bottom: 3px;
+	text-shadow: 2px 2px $navy;
+}
+
+h2 {
+	font-family: 'Jaldi', sans-serif;
+	text-transform: uppercase;
+}
+
+.subtitle {
+	font-size: 1em;
+	margin-top: 3px;
+}
+
+
+/* NAV */
+nav ul {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	//align-content: flex-end; Should  be flex end instead of float...
+	//float: right;
+	margin-right: 20px;
+}
+
+nav ul li {
+	padding-right: 8px;
+	text-transform: uppercase;
+	font-size: 0.75em;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+}
+
+
+
+
+
+
+.img-circle {
+        border-radius: 50%;
+    }
+
+.social {
+	font-size: 2rem;
+	margin-left: 200px;
+}    
+
+
+.button {
+	@include button();
+}

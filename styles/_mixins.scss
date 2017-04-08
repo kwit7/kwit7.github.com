@@ -1,0 +1,67 @@
+@mixin shape-right($shape-color,$shape-height,$shape-width,$shape-position) {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  //width: 0;
+  height: $shape-height;
+  border: calc(#{$shape-width} / 2 + #{$shape-width} / 10 ) solid rgba(0,0,0,0);
+  border-left: 0 solid;
+  border-right: $shape-width solid $shape-color;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  position: absolute;
+  right: 0;
+  margin-top: $shape-position;
+}
+
+@mixin shape-left($shape-color,$shape-height,$shape-width,$shape-position) {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  // width: 0;
+  height: $shape-height;
+  border: calc(#{$shape-width} / 2 + #{$shape-width} / 10 ) solid rgba(0,0,0,0);
+  border-right: 0 solid;
+  border-left: $shape-width solid $shape-color;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  position: absolute;
+  left: 0;
+  margin-top: $shape-position;
+}
+
+
+@mixin text-rotate($float,$padding:100px){
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  text-transform: uppercase;
+  text-align: left;
+  float: $float;
+  color: rgba(255,255,255,0.2);
+  // color: red;
+  font-size: 5rem;
+  padding: $padding;
+  position: absolute;
+  bottom:0;
+  z-index: 1;
+}
+
+
+@mixin button($color:#fff) {
+background:    $color;
+border:        1px solid #569;
+border-radius: 3px;
+color:         #000;
+display:       inline-block;
+padding:       8px 20px;
+font:          normal 400 24px/1 "Open Sans", sans-serif;
+text-align:    center;
+text-shadow:   none;
+}
